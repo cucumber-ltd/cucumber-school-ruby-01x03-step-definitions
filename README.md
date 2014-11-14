@@ -4,9 +4,11 @@ Prepare a feature suite with the scenario from lesson 2, and passing step defs h
 
 1. literal regexp:
 
+    ```
     Given /Lucy is 15 metres from Sean/ do
       # TODO: automation code goes here
     end
+    ```
 
 2. wrap 15 in parens
 
@@ -22,9 +24,11 @@ Prepare a feature suite with the scenario from lesson 2, and passing step defs h
 
 8. change scenario step to
 
+    ```
     Given Lucy is 28 years old and standing 15 metres from Sean
+    ```
 
-Run step def in debugger and show the value of distance
+    Run step def in debugger and show the value of distance
 
 9. change .* to [01234556789]*
 
@@ -44,19 +48,25 @@ Run step def in debugger and show the value of distance
 
 17. change scenario step to:
 
+    ```
     Given Lucy is standing 15 metres from Sean
+    ```
 
 18. change regexp to:
 
+    ```
     Lucy (?:is|is standing) (\d+) metres? from Sean
+    ```
 
-run tests to show it still works
+    Run tests to show it still works
 
 19. change step to:
 
+    ```
     Given Lucy is 15 metres from Sean’s brother Dave
+    ```
 
-run tests, show it still matches
+    Run tests, show it still matches
 
 20. add anchors, show it doesn't match anymore
 
@@ -66,13 +76,15 @@ run tests, show it still matches
 
 23. type out a Transform:
 
+    ```
     Transform(/\d+/) do |raw_number|
       raw_number.to_i
     end
+    ```
 
-replace the .to_i in the step def
+    replace the .to_i in the step def
 
-run the tests
+    run the tests
 
 
 
